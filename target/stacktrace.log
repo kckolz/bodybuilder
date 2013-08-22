@@ -1,0 +1,676 @@
+2013-08-22 15:03:58,529 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: The specified user domain class 'Person' is not a domain class
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:991)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:71)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:81)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:182)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
+	at org.codehaus.groovy.grails.plugins.springsecurity.GormUserDetailsService.loadUserByUsername(GormUserDetailsService.groovy:54)
+	at org.codehaus.groovy.grails.plugins.springsecurity.GormUserDetailsService.loadUserByUsername(GormUserDetailsService.groovy:77)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:86)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:129)
+	at org.springframework.security.authentication.ProviderManager.doAuthentication(ProviderManager.java:130)
+	at org.springframework.security.authentication.AbstractAuthenticationManager.authenticate(AbstractAuthenticationManager.java:48)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:97)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+	at org.codehaus.groovy.grails.plugins.springsecurity.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:40)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.codehaus.groovy.grails.plugins.springsecurity.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:79)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:79)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:381)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:168)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:03:58,530 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: The specified user domain class 'Person' is not a domain class
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:03:58,563 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: The specified user domain class 'Person' is not a domain class
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:03:58,563 [http-bio-8080-exec-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: The specified user domain class 'Person' is not a domain class
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:14:02,786 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.invokeMethod(DefaultGrailsApplication.java:689)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1288)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at SpringSecurityCoreGrailsPlugin$_closure5.call(SpringSecurityCoreGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:768)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:717)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:243)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:733)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:404)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:365)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:243)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:169)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.cacheFilesForDirectory(DirectoryWatcher.java:211)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.cacheFilesForDirectory(DirectoryWatcher.java:205)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.checkForNewFiles(DirectoryWatcher.java:188)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:164)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+2013-08-22 15:14:02,788 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:14:02,788 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:14:02,788 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:14:17,093 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.invokeMethod(DefaultGrailsApplication.java:689)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1288)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at SpringSecurityCoreGrailsPlugin$_closure5.call(SpringSecurityCoreGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:768)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:717)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:243)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:733)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:404)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:365)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:243)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:169)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.cacheFilesForDirectory(DirectoryWatcher.java:211)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.checkForNewFiles(DirectoryWatcher.java:188)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:164)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+2013-08-22 15:14:17,093 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:14:17,093 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:14:17,093 [Thread-11] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Dynamic method is<Artefact>Class(artefactClass) requires a single Class parameter
+	at SpringSecurityCoreGrailsPlugin$_closure5.doCall(SpringSecurityCoreGrailsPlugin.groovy:630)
+2013-08-22 15:23:32,635 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:50)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1259)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:23:32,638 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:23:32,639 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:23:32,639 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:23:32,640 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:23:32,640 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: UserRole for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,877 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:50)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1259)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,880 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,880 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,881 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,881 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:32:51,881 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:13)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,534 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:50)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1259)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,538 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,538 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,538 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,539 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:33:54,539 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: testUser for class: BootStrap
+	at BootStrap$_closure1.doCall(BootStrap.groovy:15)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:35:14,487 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:97)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1259)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	... 26 more
+2013-08-22 15:35:14,489 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:399)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:655)
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1259)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1082)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:956)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1106)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass.callInit(DefaultGrailsBootstrapClass.java:60)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.executeGrailsBootstraps(GrailsConfigUtils.java:74)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:108)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:35:14,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	... 8 more
+2013-08-22 15:35:14,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	... 8 more
+2013-08-22 15:35:14,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:35:14,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	... 8 more
+2013-08-22 15:35:14,491 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	... 8 more
+2013-08-22 15:35:14,491 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2013-08-22 15:35:14,491 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.runtime.InvokerInvocationException: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at grails.util.Environment.evaluateEnvironmentSpecificBlock(Environment.java:308)
+	at grails.util.Environment.executeForEnvironment(Environment.java:301)
+	at grails.util.Environment.executeForCurrentEnvironment(Environment.java:277)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: Assertion failed: 
+
+assert User.count() == 1
+            |       |
+            2       false
+
+	at BootStrap$_closure1.doCall(BootStrap.groovy:22)
+	... 8 more
