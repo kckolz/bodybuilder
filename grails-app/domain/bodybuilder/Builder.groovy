@@ -1,7 +1,13 @@
 package bodybuilder
 
 class Builder {
-
-    static constraints = {
-    }
+  
+  String name
+  Collection workouts
+  
+  static hasMany = [workouts: Workout]
+  
+  static constraints = {
+    name blank: false
+  }
 }

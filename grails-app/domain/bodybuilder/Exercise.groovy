@@ -1,7 +1,12 @@
 package bodybuilder
 
 class Exercise {
-
-    static constraints = {
-    }
+  
+  String description
+  String name
+  String muscle
+  
+  static constraints = {
+    name blank: false
+  }
 }

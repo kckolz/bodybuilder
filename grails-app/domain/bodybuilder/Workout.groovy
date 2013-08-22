@@ -1,7 +1,10 @@
 package bodybuilder
 
 class Workout {
-
-    static constraints = {
-    }
+  Date day
+  Collection exercises
+  static hasMany = [exercises: Exercise]
+  static constraints = {
+    day nullable: true
+  }
 }

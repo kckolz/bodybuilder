@@ -6,12 +6,12 @@ import org.junit.*
 import grails.test.mixin.*
 
 /**
- * WorkoutControllerTests
+ * ExerciseControllerTests
  * A unit test class is used to test individual methods or blocks of code without considering the surrounding infrastructure
  */
-@TestFor(WorkoutController)
-@Mock(Workout)
-class WorkoutControllerTests {
+@TestFor(ExerciseController)
+@Mock(Exercise)
+class ExerciseControllerTests {
 
 
     def populateValidParams(params) {
@@ -22,142 +22,142 @@ class WorkoutControllerTests {
 
     void testIndex() {
         controller.index()
-        assert "/workout/list" == response.redirectedUrl
+        assert "/exercise/list" == response.redirectedUrl
     }
 
     void testList() {
 
         def model = controller.list()
 
-        assert model.workoutInstanceList.size() == 0
-        assert model.workoutInstanceTotal == 0
+        assert model.exerciseInstanceList.size() == 0
+        assert model.exerciseInstanceTotal == 0
     }
 
     void testCreate() {
        def model = controller.create()
 
-       assert model.workoutInstance != null
+       assert model.exerciseInstance != null
     }
 
     void testSave() {
         controller.save()
 
-        assert model.workoutInstance != null
-        assert view == '/workout/create'
+        assert model.exerciseInstance != null
+        assert view == '/exercise/create'
 
         response.reset()
 
         populateValidParams(params)
         controller.save()
 
-        assert response.redirectedUrl == '/workout/show/1'
+        assert response.redirectedUrl == '/exercise/show/1'
         assert controller.flash.message != null
-        assert Workout.count() == 1
+        assert Exercise.count() == 1
     }
 
     void testShow() {
         controller.show()
 
         assert flash.message != null
-        assert response.redirectedUrl == '/workout/list'
+        assert response.redirectedUrl == '/exercise/list'
 
 
         populateValidParams(params)
-        def workout = new Workout(params)
+        def exercise = new Exercise(params)
 
-        assert workout.save() != null
+        assert exercise.save() != null
 
-        params.id = workout.id
+        params.id = exercise.id
 
         def model = controller.show()
 
-        assert model.workoutInstance == workout
+        assert model.exerciseInstance == exercise
     }
 
     void testEdit() {
         controller.edit()
 
         assert flash.message != null
-        assert response.redirectedUrl == '/workout/list'
+        assert response.redirectedUrl == '/exercise/list'
 
 
         populateValidParams(params)
-        def workout = new Workout(params)
+        def exercise = new Exercise(params)
 
-        assert workout.save() != null
+        assert exercise.save() != null
 
-        params.id = workout.id
+        params.id = exercise.id
 
         def model = controller.edit()
 
-        assert model.workoutInstance == workout
+        assert model.exerciseInstance == exercise
     }
 
     void testUpdate() {
         controller.update()
 
         assert flash.message != null
-        assert response.redirectedUrl == '/workout/list'
+        assert response.redirectedUrl == '/exercise/list'
 
         response.reset()
 
 
         populateValidParams(params)
-        def workout = new Workout(params)
+        def exercise = new Exercise(params)
 
-        assert workout.save() != null
+        assert exercise.save() != null
 
         // test invalid parameters in update
-        params.id = workout.id
+        params.id = exercise.id
         //TODO: add invalid values to params object
 
         controller.update()
 
-        assert view == "/workout/edit"
-        assert model.workoutInstance != null
+        assert view == "/exercise/edit"
+        assert model.exerciseInstance != null
 
-        workout.clearErrors()
+        exercise.clearErrors()
 
         populateValidParams(params)
         controller.update()
 
-        assert response.redirectedUrl == "/workout/show/$workout.id"
+        assert response.redirectedUrl == "/exercise/show/$exercise.id"
         assert flash.message != null
 
         //test outdated version number
         response.reset()
-        workout.clearErrors()
+        exercise.clearErrors()
 
         populateValidParams(params)
-        params.id = workout.id
+        params.id = exercise.id
         params.version = -1
         controller.update()
 
-        assert view == "/workout/edit"
-        assert model.workoutInstance != null
-        assert model.workoutInstance.errors.getFieldError('version')
+        assert view == "/exercise/edit"
+        assert model.exerciseInstance != null
+        assert model.exerciseInstance.errors.getFieldError('version')
         assert flash.message != null
     }
 
     void testDelete() {
         controller.delete()
         assert flash.message != null
-        assert response.redirectedUrl == '/workout/list'
+        assert response.redirectedUrl == '/exercise/list'
 
         response.reset()
 
         populateValidParams(params)
-        def workout = new Workout(params)
+        def exercise = new Exercise(params)
 
-        assert workout.save() != null
-        assert Workout.count() == 1
+        assert exercise.save() != null
+        assert Exercise.count() == 1
 
-        params.id = workout.id
+        params.id = exercise.id
 
         controller.delete()
 
-        assert Workout.count() == 0
-        assert Workout.get(workout.id) == null
-        assert response.redirectedUrl == '/workout/list'
+        assert Exercise.count() == 0
+        assert Exercise.get(exercise.id) == null
+        assert response.redirectedUrl == '/exercise/list'
     }
 }
