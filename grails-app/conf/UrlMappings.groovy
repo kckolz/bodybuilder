@@ -20,8 +20,7 @@ class UrlMappings {
 		 */
         "/"	{
 			controller	= 'home'
-			action		= { 'index' }
-            view		= { 'index' }
+            action = 'index'
         }
 		"/$controller/$action?/$id?"{
 			constraints {

@@ -10,10 +10,16 @@ class User {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+    Collection workouts
+    Profile profile
+    static hasMany = [workouts: Workout]
 
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+        profile unique: true
+        workouts nullable: true
+        profile nullable: true
 	}
 
 	static mapping = {

@@ -95,6 +95,8 @@ grails.config.defaults.locations = [KickstartResources]
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'bodybuilder.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'bodybuilder.UserRole'
 grails.plugins.springsecurity.authority.className = 'bodybuilder.Role'
+grails.plugins.springsecurity.auth.loginFormUrl = '/'
+grails.plugins.springsecurity.failureHandler.defaultFailureUrl = '/'
 
 //Config based security (currently using annotations)
 //grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"

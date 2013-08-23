@@ -9,7 +9,6 @@
 			</a>
 
 			<a class="brand" href="${createLink(uri: '/')}">
-				<img class="logo" src="${resource(plugin: 'kickstart-with-bootstrap', dir:'kickstart/img',file:'grails.png')}" alt="${meta(name:'app.name')}" />
 				${meta(name:'app.name')}
 				<small> v${meta(name:'app.version')}</small>
 			</a>
@@ -45,9 +44,20 @@
 					<%--Right-side entries--%>
 					<%--NOTE: the following menus are in reverse order due to "pull-right" alignment (i.e., right to left)--%>
 					<g:render template="/_menu/language"/>														
-					<g:render template="/_menu/info"/>														
-					<g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->
-					<g:render template="/_menu/admin"/>														
+					<g:render template="/_menu/info"/>	
+                    <sec:ifNotLoggedIn>
+                      <g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->
+                    </sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn>
+                      <ul class="nav pull-right">
+                        <li class="dropdown">
+                          <g:link controller="user" action="edit" class="nav pull-right">${username}</g:link>
+                        </li>
+                      </ul>
+                    </sec:ifLoggedIn>
+                    <sec:ifAllGranted roles="ROLE_ADMIN">
+                      <g:render template="/_menu/admin"/>
+                    </sec:ifAllGranted>
 <%-- 					<g:render template="/_menu/search"/> --%>
 	  			</div>
 
